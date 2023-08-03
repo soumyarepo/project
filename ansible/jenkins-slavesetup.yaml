@@ -4,8 +4,7 @@
   tasks:  
   - name: update ubuntu repo 
     apt:
-      updatecache: yes
-      force_apt_get: yes
+      update_cache: yes
       cache_valid_time: 3600
 
   - name: install java
@@ -14,13 +13,12 @@
       state: present
 
   - name: download maven packages
-    get_url: https://dlcdn.apache.org/maven/maven-3/3.9.3/binaries/apache-maven-3.9.3-bin.tar.gz
-    dest: /opt
+    get_url: 
+      url:  https://dlcdn.apache.org/maven/maven-3/3.9.4/binaries/apache-maven-3.9.4-bin.tar.gz
+      dest: /opt
 
   - name: extract maven packages
     unarchive:
-      src: /opt/apache-maven-3.9.3-bin.tar.gz
+      src: /opt/apache-maven-3.9.4-bin.tar.gz
       dest: /opt
       remote_src: yes
-   
-
