@@ -36,6 +36,7 @@ resource "aws_security_group" "demo-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+<<<<<<< HEAD
   ingress {
     description = "JENKINSPORT"
     from_port   = 8080
@@ -44,6 +45,8 @@ resource "aws_security_group" "demo-sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+=======
+>>>>>>> 7abdc67fe5b7ff43830fea185cb7ffb9c9e9ec95
   egress {
     description = "SSH"
     from_port   = 0
